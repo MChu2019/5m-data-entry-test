@@ -8,8 +8,23 @@ def swap(x, y):
     """
     return
 
+def swap(x, y):
+    # Check if both x and y are numeric (int or float)
+    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
+        return -1
 
+    # Swap using arithmetic operations (no temporary variable)
+    x = x + y
+    y = x - y
+    x = x - y
+
+    print("Swapped values: x =", x, ", y =", y)
+    return x, y  # Optional, to use swapped values later
+    
 # Task 2
 # Invoke the function "swap" using the following scenarios:
 # - "Apple", 10
 # - 9, 17
+
+swap( "Apple", 10)       
+swap(9, 17)  
